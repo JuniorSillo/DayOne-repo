@@ -1,7 +1,7 @@
-#Name Of Workflow
+# Name Of Workflow
 name: CI Demonstration
 
-#when should this workflow run
+# When should this workflow run
 on:
   push:
     branches:
@@ -10,18 +10,16 @@ on:
     branches:
       - main
 
-#jobs to be run
+# Jobs to be run
 jobs:
   build:
-    #which environment to use
+    # Which environment to use
     runs-on: ubuntu-latest
 
-    #steps to be executed
+    # Steps to be executed
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Run Command
-        run: echo "Checkout, is is a CI demonstration workflow!"
+        uses: actions/checkout@v5
 
-      
+      - name: Run command
+        run: echo "Checkout, this is a CI demonstration workflow!"
